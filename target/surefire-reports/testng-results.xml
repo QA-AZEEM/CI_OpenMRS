@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-11-19T13:14:01 IST" name="Suite" finished-at="2025-11-19T13:14:10 IST" duration-ms="9178">
+    <groups>
+    </groups>
+    <test started-at="2025-11-19T13:14:01 IST" name="chrome Test" finished-at="2025-11-19T13:14:10 IST" duration-ms="9178">
+      <class name="mrs.ci_openmrs.testcase.AdminLoginTC">
+        <test-method is-config="true" signature="SetUp(java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@66982506]" started-at="2025-11-19T13:14:01 IST" name="SetUp" finished-at="2025-11-19T13:14:08 IST" duration-ms="7336" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method signature="adminValidLogin(java.lang.String,java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@66982506]" started-at="2025-11-19T13:14:08 IST" name="adminValidLogin" data-provider="loginCredentials" finished-at="2025-11-19T13:14:10 IST" duration-ms="1603" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- adminValidLogin -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@66982506]" started-at="2025-11-19T13:14:10 IST" name="teardown" finished-at="2025-11-19T13:14:10 IST" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- mrs.ci_openmrs.testcase.AdminLoginTC -->
+    </test> <!-- chrome Test -->
+  </suite> <!-- Suite -->
+</testng-results>

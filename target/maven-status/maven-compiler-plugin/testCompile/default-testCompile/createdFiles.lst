@@ -1,0 +1,3 @@
+mrs\ci_openmrs\BaseClass.class
+mrs\ci_openmrs\itestlistners\ExtentTestListners.class
+mrs\ci_openmrs\testcase\AdminLoginTC.class

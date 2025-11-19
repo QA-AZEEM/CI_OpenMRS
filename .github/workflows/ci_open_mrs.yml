@@ -1,6 +1,5 @@
 name: CI OpenMRS Tests
 
-# Trigger workflow on push to main or pull requests
 on:
   push:
     branches:
@@ -9,28 +8,24 @@ on:
     branches:
       - main
 
-# Define the environment
 jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        java-version: [17]  # Adjust based on your project Java version
+        java-version: [17]
         browser: [chrome, firefox]
 
     steps:
-      # 1. Checkout the repository
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 2. Setup Java
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
           java-version: ${{ matrix.java-version }}
           distribution: temurin
 
-      # 3. Cache Maven dependencies (optional but faster)
       - name: Cache Maven packages
         uses: actions/cache@v3
         with:
@@ -40,30 +35,28 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      # 4. Install dependencies and run tests
       - name: Run Maven tests
         run: |
           mvn clean test -B
         env:
-          BROWSER: ${{ matrix.browser }}  # You can pass browser to your tests if needed
+          BROWSER: ${{ matrix.browser }}
 
-      # 5. Upload screenshots folder as artifact
+      # Upload screenshots using new version
       - name: Upload screenshots
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: screenshots
           path: test-output/screenshots/
 
-      # 6. Upload Extent Reports
+      # Upload Extent Reports using new version
       - name: Upload Extent Reports
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: extent-reports
           path: test-output/extent-reports/
 
-      # 7. Optional: Show headless test logs
       - name: Display test logs
         if: failure()
         run: cat target/surefire-reports/*.txt

@@ -28,13 +28,31 @@ public class LoginPage {
 	private WebElement passwordField;
 
 	@FindBy(xpath = "//li[@id='Inpatient Ward']")
-	private WebElement locationField;
+	private WebElement inpatientField;
+	
+	@FindBy(xpath = "//li[@id='Isolation Ward']")
+	private WebElement isolationField;
+	
+	@FindBy(xpath = "//li[@id='Laboratory']")
+	private WebElement laboratoryField;
+	
+	@FindBy(xpath = "//li[@id='Outpatient Clinic']")
+	private WebElement outPatientClinicField;
+	
+	@FindBy(xpath = "//li[@id='Pharmacy']")
+	private WebElement pharmacyField;
+	
+	@FindBy(xpath = "//li[@id='Registration Desk']")
+	private WebElement registrationDeskField;
 
 	@FindBy(xpath = "//input[@id='loginButton']")
 	private WebElement loginButton;
 
 	@FindBy(xpath = "//a[normalize-space()='Logout']")
 	private WebElement logoutButton;
+	
+	@FindBy(xpath = "//div[@id='error-message']")
+	private WebElement errorMessage;
 
 	public void enterUsername(String username) {
 		usernameField.sendKeys(username);
@@ -44,18 +62,73 @@ public class LoginPage {
 		passwordField.sendKeys(pwd);
 	}
 
-	public void selectLocation() {
-		locationField.click();
+	public void selectInpatientLocation() {
+		inpatientField.click();
+	}
+	
+	public void selectIsolationLocation() {
+		isolationField.click();
+	}
+	
+	public void selectLaboratoryLocation() {
+		laboratoryField.click();
+	}
+	
+	public void selectOutPatientClinicLocation() {
+		outPatientClinicField.click();
+	}
+	
+	public void selectPharmacyLocation() {
+		pharmacyField.click();
+	}
+	
+	public void selectRegistrationDeskLocation() {
+		registrationDeskField.click();
 	}
 
 	public void clickLogin() {
 		loginButton.click();
 	}
 	
-	public void adminLogin(String username, String pwd) {
+	public void loginAsInpatient(String username, String pwd) {
 		enterUsername(username);
 		enterPassword(pwd);
-		selectLocation();
+		selectInpatientLocation();
+		clickLogin();
+	}
+	
+	public void loginAsIsolation(String username, String pwd) {
+		enterUsername(username);
+		enterPassword(pwd);
+		selectIsolationLocation();
+		clickLogin();
+	}
+	
+	public void loginAsLaboratory(String username, String pwd) {
+		enterUsername(username);
+		enterPassword(pwd);
+		selectLaboratoryLocation();
+		clickLogin();
+	}
+	
+	public void loginAsOutPatientClinic(String username, String pwd) {
+		enterUsername(username);
+		enterPassword(pwd);
+		selectOutPatientClinicLocation();
+		clickLogin();
+	}
+	
+	public void loginAsPharmacy(String username, String pwd) {
+		enterUsername(username);
+		enterPassword(pwd);
+		selectPharmacyLocation();
+		clickLogin();
+	}
+	
+	public void loginAsRegistrationDesk(String username, String pwd) {
+		enterUsername(username);
+		enterPassword(pwd);
+		selectRegistrationDeskLocation();
 		clickLogin();
 	}
 	
@@ -65,6 +138,15 @@ public class LoginPage {
 			return logoutButton.isDisplayed();
 		} catch (Exception e) {
 			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	public boolean isErrorMessageDisplayed() {
+		try {
+			wait.until(ExpectedConditions.visibilityOf(errorMessage));
+			return errorMessage.isDisplayed();
+		} catch (Exception e) {
 			return false;
 		}
 	}

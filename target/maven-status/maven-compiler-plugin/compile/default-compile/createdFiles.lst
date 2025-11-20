@@ -4,3 +4,4 @@ mrs\ci_openmrs\page\LoginPage.class
 mrs\ci_openmrs\config\ConfigReader.class
 mrs\ci_openmrs\util\ScreenshotUtil.class
 mrs\ci_openmrs\App.class
+mrs\ci_openmrs\util\TestData.class

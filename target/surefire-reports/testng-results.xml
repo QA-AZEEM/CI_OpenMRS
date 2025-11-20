@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-19T13:14:01 IST" name="Suite" finished-at="2025-11-19T13:14:10 IST" duration-ms="9178">
+  <suite started-at="2025-11-19T17:54:53 IST" name="Suite" finished-at="2025-11-19T17:56:51 IST" duration-ms="118306">
     <groups>
     </groups>
-    <test started-at="2025-11-19T13:14:01 IST" name="chrome Test" finished-at="2025-11-19T13:14:10 IST" duration-ms="9178">
+    <test started-at="2025-11-19T17:54:53 IST" name="chrome Test" finished-at="2025-11-19T17:56:51 IST" duration-ms="118306">
       <class name="mrs.ci_openmrs.testcase.AdminLoginTC">
-        <test-method is-config="true" signature="SetUp(java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@66982506]" started-at="2025-11-19T13:14:01 IST" name="SetUp" finished-at="2025-11-19T13:14:08 IST" duration-ms="7336" status="PASS">
+        <test-method is-config="true" signature="SetUp(java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:54:53 IST" name="SetUp" finished-at="2025-11-19T17:55:01 IST" duration-ms="7378" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method signature="adminValidLogin(java.lang.String,java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@66982506]" started-at="2025-11-19T13:14:08 IST" name="adminValidLogin" data-provider="loginCredentials" finished-at="2025-11-19T13:14:10 IST" duration-ms="1603" status="PASS">
+        <test-method signature="inpatientLogin(java.lang.String,java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:55:01 IST" name="inpatientLogin" data-provider="loginCredentials" finished-at="2025-11-19T17:55:02 IST" duration-ms="1621" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -33,8 +33,194 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- adminValidLogin -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@66982506]" started-at="2025-11-19T13:14:10 IST" name="teardown" finished-at="2025-11-19T13:14:10 IST" duration-ms="125" status="PASS">
+        </test-method> <!-- inpatientLogin -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:55:02 IST" name="teardown" finished-at="2025-11-19T17:55:02 IST" duration-ms="136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="SetUp(java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:55:02 IST" name="SetUp" finished-at="2025-11-19T17:55:08 IST" duration-ms="5806" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method signature="invalidLogin(java.lang.String,java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:55:08 IST" name="invalidLogin" data-provider="invalidCredential" finished-at="2025-11-19T17:55:09 IST" duration-ms="1003" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[bobby.rath]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[V55!K%%^0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLogin -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:55:09 IST" name="teardown" finished-at="2025-11-19T17:55:09 IST" duration-ms="96" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="SetUp(java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:55:09 IST" name="SetUp" finished-at="2025-11-19T17:55:16 IST" duration-ms="6447" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method signature="isolationWardLogin(java.lang.String,java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:55:16 IST" name="isolationWardLogin" data-provider="loginCredentials" finished-at="2025-11-19T17:55:18 IST" duration-ms="1830" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isolationWardLogin -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:55:18 IST" name="teardown" finished-at="2025-11-19T17:55:18 IST" duration-ms="127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="SetUp(java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:55:18 IST" name="SetUp" finished-at="2025-11-19T17:56:21 IST" duration-ms="63342" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method signature="laboratoryLogin(java.lang.String,java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:56:21 IST" name="laboratoryLogin" data-provider="loginCredentials" finished-at="2025-11-19T17:56:23 IST" duration-ms="1775" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- laboratoryLogin -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:56:23 IST" name="teardown" finished-at="2025-11-19T17:56:23 IST" duration-ms="220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="SetUp(java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:56:23 IST" name="SetUp" finished-at="2025-11-19T17:56:30 IST" duration-ms="6309" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method signature="outPatietClinicLogin(java.lang.String,java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:56:30 IST" name="outPatietClinicLogin" data-provider="loginCredentials" finished-at="2025-11-19T17:56:32 IST" duration-ms="1776" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- outPatietClinicLogin -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:56:32 IST" name="teardown" finished-at="2025-11-19T17:56:32 IST" duration-ms="137" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="SetUp(java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:56:32 IST" name="SetUp" finished-at="2025-11-19T17:56:40 IST" duration-ms="7788" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method signature="pharmacyLogin(java.lang.String,java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:56:40 IST" name="pharmacyLogin" data-provider="loginCredentials" finished-at="2025-11-19T17:56:44 IST" duration-ms="4083" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pharmacyLogin -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:56:44 IST" name="teardown" finished-at="2025-11-19T17:56:44 IST" duration-ms="144" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="SetUp(java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:56:44 IST" name="SetUp" finished-at="2025-11-19T17:56:50 IST" duration-ms="5798" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method signature="registrationDeskLogin(java.lang.String,java.lang.String)[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:56:50 IST" name="registrationDeskLogin" data-provider="loginCredentials" finished-at="2025-11-19T17:56:51 IST" duration-ms="1501" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registrationDeskLogin -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:mrs.ci_openmrs.testcase.AdminLoginTC@4f32a3ad]" started-at="2025-11-19T17:56:51 IST" name="teardown" finished-at="2025-11-19T17:56:51 IST" duration-ms="145" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

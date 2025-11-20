@@ -1,0 +1,62 @@
+name: CI OpenMRS Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java-version: [17]
+        browser: [chrome]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: ${{ matrix.java-version }}
+          distribution: temurin
+
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Run Maven tests
+        run: |
+          mvn clean test -B
+        env:
+          BROWSER: ${{ matrix.browser }}
+
+      # Upload screenshots using new version
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: test-output/screenshots/
+
+      # Upload Extent Reports using new version
+      - name: Upload Extent Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: extent-reports
+          path: test-output/extent-reports/
+
+      - name: Display test logs
+        if: failure()
+        run: cat target/surefire-reports/*.txt
